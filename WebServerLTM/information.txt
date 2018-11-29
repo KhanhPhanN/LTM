@@ -57,8 +57,8 @@
         <p>Information</p>
         User: <input type="text" id="username-info" placeholder="username">
         Pass: <input type="password" id="password-info" placeholder="password">
-        Full name:<input type="text" id="fullname-info" placeholder="Enter username">
-        ID:<input type="text" id="id" placeholder="Enter password">
+        Full name:<input type="text" id="fullname-info" placeholder="Enter full name">
+        ID:<input type="text" id="id" placeholder="Enter IDs">
         <button id="submit" onclick="update()">Update</button>
       <div id="notice"></div>
     </div>
