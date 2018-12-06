@@ -1,26 +1,16 @@
                  <style>
-#title{
-    line-height:20px;
-    margin:0px auto;
-    padding-top:10px;
-    width:600px;
-    height:20px;
-    background-color:#679bef;
-    border:1px solid #164a9e;
-    border-radius :5px;
-    box-shadow: 5px 5px 20px #888888;
-    margin-bottom:20px;
-    font-size: 1.5em;
-    font-weght:bold;
-}
+
 #signin{
-    width:300px;
+    width:350px;
     height:600px;
     background-color:#1860d3;
     padding:20px;
     border:1px solid #1860d3;
     border-radius:5px;
     margin:0px auto;
+    text-align:left; 
+    font-weight:500px;
+    color:white;
 }
 #signin p{
     text-align:center;
@@ -45,14 +35,15 @@
     color:#07337a;
     background-color:#c3d0e4;
     padding:10px;
-    width:300px;
+    width:330px;
     font-size:1.5em;
     font-weight: 700px;
     margin-bottom:20px;
+    text-align:center;
 }
 </style>
  <div id="in-fo">
- <div id="title">WEBSERVER C/C++</div>
+
        <div id="signin">
         <p>Information</p>
         User: <input type="text" id="username-info" placeholder="username">
