@@ -62,6 +62,7 @@
 </style>
 <body>
     <div id="title">WEBSERVER BY C/C++</div>
+	<div id="content">
     <div id="signin">
         <p>Webserver</p>
         <input type="text" name="username" id="username" placeholder="Enter username">
@@ -72,7 +73,7 @@
         <a href="/xinchao"><button >Cancel</button></a>
         <p id="err"><p>
     </div>
-		
+		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 		function get(){
@@ -87,12 +88,43 @@
 					    $("#err").css({"color":"red","font-size":"15px"});
                                             }else{
                                                  $("#err").html("dang ki thanh cong"); 
-					$("#err").css({"color":"blue","font-size":"15px"});
+					  $("#err").css({"color":"blue","font-size":"15px"});
+					 $.post("/user",
+                 {"username": $("#username").val()},
+                 function(data2,status){
+                      //  $("#main").html("");
+					     $("#content").html("");
+                         $("#content").html(data2);
+                         var temp=data2.split("&");
+                         $("#username-info").val(temp[1]);
+                         $("#password-info").val(temp[2]);
+                         $("#fullname-info").val(temp[3]);
+                         $("#id").val(temp[4]);
+                 });
                                                    }	
 				})	
 			}
 			}
-		
+		             function update(){
+                    if(!$("#username-info").val()||!$("#password-info").val()||!$("#fullname-info").val()||!$("#id").val()){
+                                          $("#notice").html("Thieu du lieu"); 
+                         $("#notice").css({"color":"red","font-size":"15px"});
+                                   }else{
+                    $.post("/update",
+                 {"username":$("#username-info").val(), "password":$("#password-info").val(),"fullname":$("#fullname-info").val(), "id":$("#id").val()},
+                 function(data,status){
+                 //var dulieu = data.split("&")
+                    if(data=="1")
+                       { 
+                        $("#notice").html("update successfull!!");
+                        $("#notice").css("color","white");
+                        }else{
+                          $("#notice").html("update failed because unknown user!!");
+                        $("#notice").css("color","red");
+                        }
+                 });
+     }
+                                 };
 	</script>
 	</body>
 </html>
