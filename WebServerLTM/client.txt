@@ -94,7 +94,7 @@
 	        {"username":$("#username").val(), "password":$("#password").val()},
 	        function(data,status){
 			       var dulieu = data.split("&")
-	                if(dulieu[1]=="0"){//đăng nhập không thành cồn
+	                if(dulieu[1]=="0"){//đăng nhập không thành công
 					$("#error").html("Sai ten tai khoan hoac mat khau"); 
 					$("#error").css({"color":"red","font-size":"15px"});
 					}else if(dulieu[1]=="1"){//đăng nhập thành công với người dùng ko có quyền admin
