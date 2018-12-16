@@ -51,6 +51,7 @@
         Full name:<input type="text" id="fullname-info" placeholder="Enter full name">
         ID:<input type="text" id="id" placeholder="Enter IDs">
         <button id="submit" onclick="update()">Update</button>
+        <a href="/xinchao"><button >Cancel</button></a>
       <div id="notice"></div>
     </div>
     </div>

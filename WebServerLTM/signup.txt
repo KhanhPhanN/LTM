@@ -21,6 +21,7 @@
     margin-bottom:50px;
     font-size: 1.5em;
     font-weght:bold;
+    color:white;
 }
 #signin{
     width:320px;
