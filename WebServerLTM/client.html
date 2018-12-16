@@ -115,7 +115,7 @@
                  {"username":$("#username").val(), "password":$("#password").val()},
                  function(data,status){
                         var dulieu = data.split("&")
-                         if(dulieu[1]=="0"){//đăng nhập không thành cồn
+                         if(dulieu[1]=="0"){//đăng nhập không thành cồng
                          $("#error").html("Sai ten tai khoan hoac mat khau"); 
                          $("#error").css({"color":"red","font-size":"15px"});
                          }else if(dulieu[1]=="1"){//đăng nhập thành công với người dùng ko có quyền admin
@@ -133,6 +133,8 @@
              	            $("#left").html("");
                 	        $("#left").html(data);
 			 				$("#left").css("border","1px solid gray");
+							$("#left").css("background","#1860d3");
+							$("#left").css("color","white");
 			 				$("#title").html();
 			 				$("#content").html("");
                         }
